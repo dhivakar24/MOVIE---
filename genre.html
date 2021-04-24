@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css"> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="SHORTCUT ICON" href="tv_tbg.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet"> 
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+  <style type="text/css">
+    
+    .navbar {
+      font-family: 'Nunito',sans-serif;
+      margin-bottom: 0;
+      background-color: black;
+      border: 0;
+      padding-top: 50px 100px;
+      font-size: 20px !important;
+      /*letter-spacing: 4px;*/
+      /*opacity: 0.9;*/
+      border-radius: 0;
+  }
+   .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+    .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+    .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+    .navbar-nav li.active a {
+      color: #fff !important;
+      /*background-color: #29292c !important;*/
+  }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  /*#movieGenreLabel{
+margin-bottom: 10px;
+margin-left: 15px;
+text-align: left;
+color: white;
+font-size: 24px;
+text-shadow: 2px 2px 4px #a20909;
+}
+*/
+body, html {
+      background-color:   white  !important;
+      overflow: none;
+  }
+
+  /*#EEEEEE*/
+
+button.btnModal{
+    background-color: #EEEEEE;
+    border: #EEEEEE;
+    border-radius: 5px;
+}
+
+.current {
+	color: white;
+}
+
+button.searchbtnModal{
+    background-color: transparent;
+    border: transparent;
+    border-radius: 5px;
+}
+
+img {
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.read {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #555555;
+    color: white;
+    border: 2px solid #555555;
+    border-radius: 3px;
+}
+
+.read:hover {
+    background-color: white;
+    color: black;
+}
+
+.hdr1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 92px;
+  padding: 80px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  
+}
+
+.retroshadow {
+    color: #2c2c2c;
+    /*background-color: #d5d5d5;*/
+    letter-spacing: .05em;
+    text-shadow: 
+      4px 4px 0px #d5d5d5, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+
+ }
+
+ @import url('https://fonts.googleapis.com/css?family=Pacifico');
+ .insetshadow {
+  font-family: 'Pacifico', cursive;
+  color: #1976D2;
+    /*background-color: #d5d5d5;*/
+  letter-spacing: .05em;
+  text-shadow: 
+      4px 4px 0px gold, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+ .movieName {
+ 	font-size: 20px;
+ 	font-weight: bold;
+ }
+
+ .overview {
+ 	color: #808080;
+ }
+
+.heading {
+  width: 100%;
+  height: 250px;
+  font-weight: bold;
+  text-align: center;
+  background: gold;
+}
+
+.header_logo {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding-top: 80px;
+  font-size: 50px;
+  text-shadow: 3px 4px rgba(black, .1);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300');
+/** {
+ box-sizing: border-box;
+}*/
+
+#namer {
+ /*position: relative;*/
+ max-width: 800px;
+ /*margin: 150px auto 0;*/
+ font-family: 'Nunito', sans-serif;
+}
+
+#namer input {
+ border: 0;
+ border-bottom: 2px solid #1976D2;
+ border-right: 2px solid #1976D2;
+ border-left: 2px solid #1976D2;
+ border-top: 2px solid #1976D2;
+
+ width: 100%;
+ font-size: 30px;
+ line-height: 35px;
+ height: 70px;
+ text-align: center;
+ padding: 10px;
+ outline: 1;
+
+ background: transparent;
+	color: #1976D2;
+}
+
+
+
+.genre-btn button {
+	background:sandybrown;
+	color: black;
+	border: 2px solid;
+	border-color:white;
+	border-radius: 5px;
+	padding: 15px;
+	padding-bottom: 20px;
+	display: block;
+	width: 100%;
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'Nunito', sans-serif;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+
+.genre-btn button:hover {
+	background: transparent;
+	color: red;
+	border: 2px solid #2b1323;
+	cursor: pointer;
+}
+
+.genre-btn button:focus {
+	background: transparent;
+	color:whitesmoke;
+	border: 2px solid #192633;
+	cursor: pointer;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:#1976D2; }
+input:focus::-moz-placeholder { color:transparent; } 
+input:focus:-ms-input-placeholder { color:#1976D2; } 
+
+/*::placeholder {
+    color: #BBDEFB;
+    opacity: 1; 
+
+:-ms-input-placeholder { 
+   color: #BBDEFB;
+}
+
+::-ms-input-placeholder { 
+}*/
+
+
+  </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 30px; letter-spacing: 1px; color: white;">  DEAR VIEWERS RATE THE MOVIES AND COMMENT ABOUT THE MOVIES</div>
+
+      </a>
+
+    </div>
+    </nav>
+  <div style="background-color: black;" align="middle">
+  <!-- <div class="heading">
+    <br>
+      <h1 align="middle" class="header_logo">Sort Movies with Genre</h1>
+    <br><br>
+  </div> -->
+
+  <img src="https://i.pinimg.com/originals/78/66/40/786640c2bda0294ef87cd938cb21c025.png" align="middle" style="width: auto;">
+
+<br><br>
+
+<div class="container">
+	<div class="row">
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">SPIDER MAN</button>
+      		</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">AVENGERS</button>
+      		</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">HARRYPOTTER</button>
+      		</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">BEACH</button>
+      		</div>
+		</div>
+
+	</div>
+
+	<br>
+
+	<div class="row">
+		
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">REMO</button>
+      		</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">MASTER</button>
+      		</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">KKK</button>
+      		</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'" >CONJURING</button>
+      		</div>
+		</div>
+
+	</div>
+
+	<br>
+
+	<div class="row">
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">WRESTLER</button>
+      		</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">DON</button>
+      		</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">INSIDIOUS</button>
+      		</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="genre-btn" align="middle">
+        		<button type="submit"onclick="window.location.href='Comment.html'">WHIPLASH</button>
+      		</div>
+		</div>
+		
+	</div>
+	
+</div>
+<br><br>
+</div>
+</div>
+  </div>
+</body>
+</html>
